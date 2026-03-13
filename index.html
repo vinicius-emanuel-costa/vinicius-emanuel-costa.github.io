@@ -1204,6 +1204,7 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             nav { padding: 18px 24px; }
+            .nav-links { gap: 20px; }
             .hero { padding: 0 24px 56px; }
             .hero-photo-wrap { width: 100%; opacity: 0.25; }
             .hero-title { letter-spacing: -3px; }
@@ -1223,17 +1224,77 @@
             footer { padding: 24px; }
         }
         @media (max-width: 640px) {
+            nav { padding: 14px 16px; }
+            .nav-links { gap: 14px; }
+            .nav-links a { font-size: 10px; letter-spacing: 1.5px; }
             .nav-links a:nth-child(2) { display: none; }
-            .hero-title { letter-spacing: -2px; }
-            .hero-foot { flex-direction: column; gap: 32px; }
-            .about-nums { grid-template-columns: repeat(3, 1fr); }
-            .pj { width: 300px; }
-            .pj.big { width: 340px; }
-            .pj.big .pj-screen { height: 240px; }
-            .cap-grid { grid-template-columns: 1fr; }
-            .contact-heading { letter-spacing: -2px; }
-            .contact-row { flex-direction: column; align-items: center; }
+
+            .hero { padding: 0 16px 40px; min-height: 100svh; }
+            .hero-title { font-size: clamp(42px, 13vw, 72px); letter-spacing: -2px; line-height: 0.9; }
+            .hero-title .stroke { -webkit-text-stroke-width: 1px; }
+            .hero-label { font-size: 9px; margin-bottom: 16px; }
+            .hero-foot { flex-direction: column; gap: 24px; margin-top: 32px; }
+            .hero-desc { max-width: 100%; }
+            .hero-desc p { font-size: 14px; line-height: 1.7; }
+
+            .marquee-el { font-size: 13px; padding: 0 20px; }
+
+            .sec-pad { padding: 80px 16px; }
+            .sec-title { font-size: clamp(28px, 8vw, 48px); letter-spacing: -1px; }
+            .sec-label { font-size: 9px; }
+
+            .about-big { font-size: clamp(20px, 5vw, 28px); line-height: 1.5; margin-bottom: 24px; }
+            .about-p { font-size: 14px; line-height: 1.8; }
+            .about-nums { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            .about-num-val { font-size: clamp(28px, 8vw, 44px); }
+            .about-img-wrap { max-width: 100%; }
+
+            .projects-header { padding: 0 16px; }
+            .projects-track-wrap { padding-left: 16px; }
+            .track-arrows { padding: 0 16px; }
+            .pj { width: 290px; }
+            .pj.big { width: 320px; }
+            .pj.big .pj-screen { height: 220px; }
+            .pj-body { padding: 20px; }
+            .pj-name { font-size: 16px; }
+            .pj-desc { font-size: 13px; }
             .projects-count { display: none; }
+
+            .cap-grid { grid-template-columns: 1fr; gap: 1px; }
+            .cap-card { padding: 32px 20px; }
+            .cap-title { font-size: 18px; }
+            .cap-desc { font-size: 13px; }
+
+            .big-text-scroll { padding: 48px 0; }
+            .big-text-inner { font-size: clamp(36px, 10vw, 60px); }
+
+            .tl-container { padding-left: 20px; }
+            .tl-line, .tl-line-fill { left: 10px; }
+            .tl-dot-wrap { left: 2px; }
+            .tl-card { padding: 16px 18px; }
+            .tl-title { font-size: 16px; }
+            .tl-place { font-size: 12px; }
+            .tl-desc { font-size: 13px; }
+            .tl-phase-label { font-size: 10px; padding-left: 36px; }
+            .tl-phase-label::before { left: 4px; }
+
+            .contact { padding: 80px 16px 60px; }
+            .contact-heading { font-size: clamp(32px, 9vw, 56px); letter-spacing: -2px; }
+            .contact-row { flex-direction: column; align-items: center; gap: 12px; }
+            .ct-link { font-size: 13px; padding: 12px 28px; }
+
+            footer { padding: 20px 16px; font-size: 10px; }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 380px) {
+            .hero-title { font-size: 42px; letter-spacing: -2px; }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 9px; letter-spacing: 1px; }
+            .about-nums { gap: 8px; }
+            .about-num-val { font-size: 26px; }
+            .pj { width: 260px; }
+            .pj.big { width: 280px; }
         }
     </style>
 </head>
