@@ -113,12 +113,13 @@
         }
         .loader-name {
             font-family: 'Syne', sans-serif;
-            font-size: 24px;
+            font-size: clamp(14px, 4.5vw, 24px);
             font-weight: 800;
-            letter-spacing: 8px;
+            letter-spacing: clamp(3px, 1.5vw, 8px);
             text-transform: uppercase;
             color: var(--white);
             overflow: hidden;
+            white-space: nowrap;
         }
         .loader-name span {
             display: inline-block;
